@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { RegularText, TitleText } from "../../../../components/Typography";
 
 export const HamburgerCardContainer = styled.div`
-  width: 100%;
+  width: 99%;
   height: 105%;
   background: ${({ theme }) => theme.colors["base-card"]};
   border-radius: 6px 36px 6px 36px;
