@@ -13,6 +13,7 @@ export const QuantityInputContainer = styled.div`
 
     input {
         width: 2rem;
+        justify-content: center;
         text-align: center;
         background: none;
         border: none; 

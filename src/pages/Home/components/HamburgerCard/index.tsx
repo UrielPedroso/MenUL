@@ -48,13 +48,14 @@ export function HamburgerCard({ lanches }: LanchesProps) {
           <TitleText size="m" color="text" as="strong">
             29,90
           </TitleText>
+        </div>
         <AddCartWrapper>
           <QuantityInput />
           <button>
             <ShoppingCart weight="fill" size={22} />
           </button>
         </AddCartWrapper>
-        </div>
+        
 
       </CardFooter>
     </HamburgerCardContainer>

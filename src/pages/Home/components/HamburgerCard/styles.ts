@@ -59,11 +59,11 @@ export const Description = styled(RegularText).attrs({
 `;
 
 export const CardFooter = styled.div`
-  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: end;
-  margin-left: 2rem;
+  justify-content: space-between;
+  margin-right: 4rem;
+  margin-left: 3rem;
 
   > div {
     display: flex;
@@ -80,8 +80,9 @@ export const CardFooter = styled.div`
 `;
 
 export const AddCartWrapper = styled.div`
-    width: 100%;
+    width: 3rem;
     display: flex;
+    justify-content: space-between;
     margin-left: 3rem;
 
     > button {
