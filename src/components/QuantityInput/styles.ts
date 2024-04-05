@@ -12,6 +12,7 @@ export const QuantityInputContainer = styled.div`
     padding: 0.5rem;
 
     input {
+        width: 2rem;
         text-align: center;
         background: none;
         border: none; 

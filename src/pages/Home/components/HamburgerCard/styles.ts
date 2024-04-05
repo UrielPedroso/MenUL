@@ -62,7 +62,7 @@ export const CardFooter = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: end;
   margin-left: 2rem;
 
   > div {
@@ -80,7 +80,9 @@ export const CardFooter = styled.div`
 `;
 
 export const AddCartWrapper = styled.div`
-    width: 1rem;
+    width: 100%;
+    display: flex;
+    margin-left: 3rem;
 
     > button {
         width: 2.375rem;
