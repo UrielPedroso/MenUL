@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const InfoWithIconContainer = styled.div`
-    display: flex;
+    display: grid;
     align-items: center;
     gap: 0.75rem;
 `;

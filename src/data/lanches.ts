@@ -1,0 +1,42 @@
+export const lanches = [
+    {
+        id: 1,
+        tags: ["tradicional"],
+        name: "Niugas Burger",
+        description: "Pao de Brioche, Hamburger Angus 180g, Molho especial neggas, Bacon",
+        photo: "negas.png",
+        price: 35.99,
+    },
+    {
+        id: 2,
+        tags: ["tradicional", "mash"],
+        name: "Burger Especial Da Casa",
+        description: "Pao de Brioche, Hamburger Angus 180g, Molho especial neggas, Bacon",
+        photo: "mash.png",
+        price: 25.99,
+    },
+    {
+        id: 3,
+        tags: ["tradicional", "hot"],
+        name: "HotStake Burger",
+        description: "Pao de Brioche, Hamburger Angus 180g, Molho de Pimenta(Carolina Reaper), Bacon",
+        photo: "hot.png",
+        price: 32.99,
+    },
+    {
+        id: 4,
+        tags: ["Gourmet", "Cheese"],
+        name: "Gourmet Especial da Casa",
+        description: "Pao de Brioche, Hamburger Angus 180g, Molho especial neggas, Bacon",
+        photo: "gourmet.png",
+        price: 39.99,
+    },
+    {
+        id: 5,
+        tags: ["chapa", "prensado"],
+        name: "Prensadinho",
+        description: "Pao de Brioche, Hamburger Angus 180g, Molho especial, Prensado no forno",
+        photo: "pren.png",
+        price: 20.99,
+    },
+];

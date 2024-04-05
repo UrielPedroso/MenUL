@@ -27,10 +27,11 @@ export const QuantityInputContainer = styled.div`
 export const IconWrapper = styled.button.attrs({
     type: "button",
 })`
-    width: 0.875rem;
-    height: 0.875rem;
+    width: 1rem;
+    height: 0.975rem;
     border: none;
     background: none;
+    justfy-content: center;
     color: ${({ theme }) => theme.colors["brand-purple"]};
     transition: 0.4s;
 

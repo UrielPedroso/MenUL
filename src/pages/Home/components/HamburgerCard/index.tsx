@@ -11,19 +11,32 @@ import {
   Tags,
 } from "./styles";
 
-export function HamburgerCard() {
+export interface Lanches{
+  id: number;
+  tags: string[];
+  name: string;
+  description: string;
+  photo: string;
+  price: number;
+}
+interface LanchesProps{
+  lanches: Lanches;
+}
+
+export function HamburgerCard({ lanches }: LanchesProps) {
   return (
     <HamburgerCardContainer>
       <CardTitleAndImage>
         <div>
-          <Name>Lanche de Pupunha</Name>
+          <Name>{lanches.name}</Name>
           <Tags>
-            <span>tradicional</span>
+            {lanches.tags.map((tag) => (
+              <span key={`${lanches.id}${tag}`}>{tag}</span>
+            ))}
           </Tags>
 
           <Description>
-            Hamburger, Bacon, Calabresa, Milho, Ervilha, Presunto, Alface,
-            Tomate, Cebola, Ketchup, Maionese e Mostarda
+            {lanches.description}
           </Description>
         </div>
 

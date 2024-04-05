@@ -11,20 +11,17 @@ export const HamburgerCardContainer = styled.div`
     width: 7rem;
     height: 7rem;
     margin-top: 0.5rem;
-    margin-left: 70%;
+    margin-left: 65%;
   }
-
-  div {
-    width: 100%;
-    margin-left: 2rem;
-  }
+  
 `;
 
 export const CardTitleAndImage = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  aling-itens: center;
+  align-items: center;
   justify-content: center;
+  margin-left: 2rem;
 `;
 
 export const Tags = styled.div`
@@ -65,7 +62,8 @@ export const CardFooter = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  margin-left: 2rem;
 
   > div {
     display: flex;
@@ -73,6 +71,8 @@ export const CardFooter = styled.div`
     gap: 3px;
     margin-right: 5rem;
   }
+
+
 
   p {
     line-height: 0.75rem;
