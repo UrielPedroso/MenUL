@@ -44,9 +44,9 @@ export function HamburgerCard({ lanches }: LanchesProps) {
       </CardTitleAndImage>
       <CardFooter>
         <div>
-          <RegularText size="s">R$</RegularText>
+          <RegularText size="s">$</RegularText>
           <TitleText size="m" color="text" as="strong">
-            29,90
+            {lanches.price}
           </TitleText>
         </div>
         <AddCartWrapper>

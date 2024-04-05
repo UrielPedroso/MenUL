@@ -3,7 +3,7 @@ import { RegularText, TitleText } from "../../../../components/Typography";
 
 export const HamburgerCardContainer = styled.div`
   width: 100%;
-  height: 100%;
+  height: 105%;
   background: ${({ theme }) => theme.colors["base-card"]};
   border-radius: 6px 36px 6px 36px;
 
@@ -11,7 +11,7 @@ export const HamburgerCardContainer = styled.div`
     width: 7rem;
     height: 7rem;
     margin-top: 0.5rem;
-    margin-left: 65%;
+    margin-left: 15rem;
   }
   
 `;

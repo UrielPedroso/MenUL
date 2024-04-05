@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 export const HeaderContainer = styled.header`
     width: 100%;
-    height: 6.5rem;
+    height: 5rem;
     background: ${({theme}) => theme.colors["base-background"]};
     display: flex;
     align-items: center;
@@ -12,6 +12,12 @@ export const HeaderContainer = styled.header`
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+
+    img{
+        padding-top: 1rem;
+        width: 7rem;
+        height: 7rem;
     }
 `;
 
@@ -26,6 +32,7 @@ interface HeaderButtonProps{
 }
 
 export const HeaderButton = styled.button<HeaderButtonProps>`
+    height: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;

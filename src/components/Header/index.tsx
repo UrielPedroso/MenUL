@@ -11,7 +11,7 @@ export function Header(){
                 
                 <HeaderButtonsContainer>
                     <HeaderButton variant="purple">
-                        <User size={20} />
+                        <User size={20} height="fill" />
                         <a href="">Login</a>
                     </HeaderButton>
                     <HeaderButton variant="yellow">

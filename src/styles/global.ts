@@ -28,5 +28,20 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
   
+  @media (max-width: 768px) {
+    html{
+        font-size: 70%;
+    }
+
+    img{
+      margin-left: 0;
+      margin-right: 2rem;
+    }
+
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+    
 `;
+
 
