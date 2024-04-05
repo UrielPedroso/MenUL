@@ -20,11 +20,12 @@ export const GlobalStyle = createGlobalStyle`
     font-size: ${({theme}) => theme.textSizes["text-regular-m"]};
   }
 
-  butto{
+  button{
     crusor: pointer;
   }
 
   a{
     text-decoration: none;
   }
+  
 `;

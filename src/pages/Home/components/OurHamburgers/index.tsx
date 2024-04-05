@@ -6,7 +6,7 @@ export function OurHamburgers(){
     return (
         <OurHamburgersContainer className="container">
             <TitleText size="l" color="subtitle">
-                Nossos Lanches
+                Nosso Cardapio
             </TitleText>
 
             <HamburgerList>

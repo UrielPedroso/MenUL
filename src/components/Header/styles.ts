@@ -21,7 +21,7 @@ export const HeaderButtonsContainer = styled.div`
     gap: 0.75rem;
 `;
 
-interface HeaderButtonsProps{
+interface HeaderButtonProps{
     variant: "purple" | "yellow";
 }
 
@@ -30,10 +30,10 @@ export const HeaderButton = styled.button<HeaderButtonProps>`
     align-items: center;
     justify-content: center;
     gap: 4px;
-    min-width: 2.3rem;
+    min-width: 2.5rem;
     border-radius: 6px;
     border: none;
-    padding: 0 0.5rem;
+    padding: 1 1rem;
     position: relative;
     font-size: ${({theme}) => theme.colors["text-regular-s"]};
 

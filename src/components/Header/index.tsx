@@ -1,6 +1,6 @@
 import { HeaderButton, HeaderButtonsContainer, HeaderContainer } from "./styles";
 import menulLogoImg from "../../assets/ul.svg";
-import { MapPin, ShoppingCart } from 'phosphor-react';
+import { ShoppingCart, User } from 'phosphor-react';
 
 
 export function Header(){
@@ -11,11 +11,11 @@ export function Header(){
                 
                 <HeaderButtonsContainer>
                     <HeaderButton variant="purple">
-                        <MapPin size={20} />
-                        699
+                        <User size={20} />
+                        <a href="">Login</a>
                     </HeaderButton>
                     <HeaderButton variant="yellow">
-                        <ShoppingCart size={20} />
+                        <ShoppingCart size={25} />
                     </HeaderButton>
                 </HeaderButtonsContainer>
             </div>
