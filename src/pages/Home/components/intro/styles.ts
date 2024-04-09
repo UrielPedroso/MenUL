@@ -14,6 +14,7 @@ export const IntroContent = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 `;
 
 export const IntroTitle = styled(TitleText)`

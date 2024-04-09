@@ -2,26 +2,24 @@ import styled from "styled-components";
 import { RegularText, TitleText } from "../../../../components/Typography";
 
 export const HamburgerCardContainer = styled.div`
-  width: 99%;
+  width: 100%;
   height: 105%;
   background: ${({ theme }) => theme.colors["base-card"]};
   border-radius: 6px 36px 6px 36px;
+ 
 
   img {
     width: 7rem;
     height: 7rem;
     margin-top: 0.5rem;
-    margin-left: 15rem;
+    margin-left: 1rem;
   }
-  
 `;
 
 export const CardTitleAndImage = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  justify-content: center;
+  display: flex;
   margin-left: 2rem;
+  justify-content: space-between;
 `;
 
 export const Tags = styled.div`
@@ -71,8 +69,6 @@ export const CardFooter = styled.div`
     gap: 3px;
     margin-right: 5rem;
   }
-
-
 
   p {
     line-height: 0.75rem;

@@ -1,24 +1,33 @@
-import { HeaderButton, HeaderButtonsContainer, HeaderContainer } from "./styles";
+import {
+  HeaderButton,
+  HeaderButtonsContainer,
+  HeaderContainer,
+} from "./styles";
 import menulLogoImg from "../../assets/ul.svg";
-import { ShoppingCart, User } from 'phosphor-react';
+import { ShoppingCart, User } from "phosphor-react";
+import { NavLink } from "react-router-dom";
 
+export function Header() {
+  return (
+    <HeaderContainer>
+      <div className="container">
+        <NavLink to="/">
+          <img src={menulLogoImg} />
+        </NavLink>
 
-export function Header(){
-    return(
-        <HeaderContainer >
-            <div className="container">
-                <img src={menulLogoImg}/>
-                
-                <HeaderButtonsContainer>
-                    <HeaderButton variant="purple">
-                        <User size={20} height="fill" />
-                        <a href="">Login</a>
-                    </HeaderButton>
-                    <HeaderButton variant="yellow">
-                        <ShoppingCart size={25} />
-                    </HeaderButton>
-                </HeaderButtonsContainer>
-            </div>
-        </HeaderContainer>
-    );
+        <HeaderButtonsContainer>
+          <HeaderButton variant="purple">
+            <User size={20} />
+            <a href="">Login</a>
+          </HeaderButton>
+
+          <NavLink to="/completeOrder">
+            <HeaderButton variant="yellow">
+              <ShoppingCart size={25} weight="fill" />
+            </HeaderButton>
+          </NavLink>
+        </HeaderButtonsContainer>
+      </div>
+    </HeaderContainer>
+  );
 }

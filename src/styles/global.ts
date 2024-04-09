@@ -30,13 +30,13 @@ export const GlobalStyle = createGlobalStyle`
   
   @media (max-width: 768px) {
     html{
-        font-size: 70%;
+        font-size: 75%;
     }
 
-    img{
-      margin-left: 0;
-      margin-right: 2rem;
-    }
+    // img{
+    //   margin-left: 0;
+    //   margin-right: 2rem;
+    // }
 
     .wrapper {
         grid-template-columns: 1fr;

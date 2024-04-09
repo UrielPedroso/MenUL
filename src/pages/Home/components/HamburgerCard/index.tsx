@@ -10,8 +10,9 @@ import {
   Name,
   Tags,
 } from "./styles";
+import { formatMoney } from "../../../../utils/formatMoney";
 
-export interface Lanches{
+export interface Lanches {
   id: number;
   tags: string[];
   name: string;
@@ -19,11 +20,13 @@ export interface Lanches{
   photo: string;
   price: number;
 }
-interface LanchesProps{
+interface LanchesProps {
   lanches: Lanches;
 }
 
 export function HamburgerCard({ lanches }: LanchesProps) {
+  const formattedPrice = formatMoney(lanches.price);
+
   return (
     <HamburgerCardContainer>
       <CardTitleAndImage>
@@ -35,9 +38,7 @@ export function HamburgerCard({ lanches }: LanchesProps) {
             ))}
           </Tags>
 
-          <Description>
-            {lanches.description}
-          </Description>
+          <Description>{lanches.description}</Description>
         </div>
 
         <img src="https://s3-alpha-sig.figma.com/img/2db1/2277/6486c85381b09fff49208c87e6368261?Expires=1713139200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ckHCGfwCot-6aM~g87yh-iPAkt~aiOTCvKdNza4bV80COx38eFHTfbzgAg0aSfh7JLMD-VuZ5qWVvHXixlhqc1EJDxFOE3foO-KxrdWXULGjACox~d0KOq8QdDHKszWn4B6j3Zf48y7kxoSmDBt09doddemjylYxwnh5ICZPtvcxg0giKwkQK~2mj8LzwzIBQrqPNS0wEqKfDo5pSahpG1vUQF1bc9jfo2v5~1USJ1jMow2F-CBncnWRq~SEWuxIa2xzREJuppmsXW2lms1dZs68JTa6-4bJksM1fwAhdEQMYrD8kLgEwdnRHmrHvmScydgcQqSNbbMJPaHSJTMzqA__" />
@@ -46,7 +47,7 @@ export function HamburgerCard({ lanches }: LanchesProps) {
         <div>
           <RegularText size="s">$</RegularText>
           <TitleText size="m" color="text" as="strong">
-            {lanches.price}
+            {formattedPrice}
           </TitleText>
         </div>
         <AddCartWrapper>
@@ -55,8 +56,6 @@ export function HamburgerCard({ lanches }: LanchesProps) {
             <ShoppingCart weight="fill" size={22} />
           </button>
         </AddCartWrapper>
-        
-
       </CardFooter>
     </HamburgerCardContainer>
   );

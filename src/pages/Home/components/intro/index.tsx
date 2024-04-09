@@ -45,7 +45,7 @@ export function Intro(){
                     <InfoWithIcon
                         iconBg={colors["brand-purple"]}
                         icon={<Hamburger weight="fill"/>}
-                        text="O pedido chega fresquinho até você"
+                        text="Chega fresquinho até você"
                     />
                     </BenefitsContainer>
                 </div>

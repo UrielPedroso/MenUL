@@ -7,6 +7,10 @@ export const HeaderContainer = styled.header`
     display: flex;
     align-items: center;
     justify-content: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 
     > div {
         display: flex;
@@ -18,6 +22,11 @@ export const HeaderContainer = styled.header`
         padding-top: 1rem;
         width: 7rem;
         height: 7rem;
+    }
+
+    a {
+        font-size: 1.2rem;
+        font-weight: lighter;
     }
 `;
 
@@ -32,7 +41,6 @@ interface HeaderButtonProps{
 }
 
 export const HeaderButton = styled.button<HeaderButtonProps>`
-    height: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,7 +48,6 @@ export const HeaderButton = styled.button<HeaderButtonProps>`
     min-width: 2.5rem;
     border-radius: 6px;
     border: none;
-    padding: 1 1rem;
     position: relative;
     font-size: ${({theme}) => theme.colors["text-regular-s"]};
 
@@ -48,5 +55,6 @@ export const HeaderButton = styled.button<HeaderButtonProps>`
         background: ${theme.colors[`brand-${variant}-light`]};
         color: ${theme.colors[`brand-${variant}-dark`]};
     `}
+    
  `;
 
