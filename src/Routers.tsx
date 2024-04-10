@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { HomePage } from "./pages/Home";
 import { CompleteOrderPage } from "./pages/CompleteOrder";
 import { DefaultLayout } from "./layouts/DefaultLayout";
+import { LoginPage } from "./pages/Login";
 
 export function Router(){
     return(
@@ -10,6 +11,7 @@ export function Router(){
                 <Route path="/" element={<HomePage />}/>
                 <Route path="/completeOrder" element={<CompleteOrderPage />}/>
             </Route>
+                <Route path="/login" element={<LoginPage />}/>
         </Routes>
     )
 }

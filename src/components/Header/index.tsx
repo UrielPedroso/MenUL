@@ -16,10 +16,12 @@ export function Header() {
         </NavLink>
 
         <HeaderButtonsContainer>
-          <HeaderButton variant="purple">
-            <User size={20} />
-            <a href="">Login</a>
-          </HeaderButton>
+          <NavLink to="/login">
+            <HeaderButton variant="purple">
+              <User size={20} />
+              Login
+            </HeaderButton>
+          </NavLink>
 
           <NavLink to="/completeOrder">
             <HeaderButton variant="yellow">

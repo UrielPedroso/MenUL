@@ -1,8 +1,11 @@
+import { MapPin } from "phosphor-react";
 import { TitleText } from "../../../../components/Typography";
 import { SectionTitle } from "../SectionTitle";
 import { CompleteOrderFormContainer, FormSectionContainer } from "./styles";
+import { useTheme } from "styled-components";
 
 export function CompleteOrderForm() {
+    const{ colors } = useTheme();
   return (
     <CompleteOrderFormContainer>
       <TitleText size="xs" color="subtitle">
@@ -11,7 +14,9 @@ export function CompleteOrderForm() {
 
       <FormSectionContainer>
         <SectionTitle 
-            title="Endere;o"
+            title="Endereço"
+            subtitle="Informe o endereço"
+            icon={<MapPin color={colors["brand-yellow"]} size={22}/>}
         /> 
       </FormSectionContainer>
     </CompleteOrderFormContainer>

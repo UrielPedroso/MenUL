@@ -5,7 +5,7 @@ import { RegularText } from "../../../../components/Typography";
 interface SectionTitleProps {
     title: string;
     subtitle: string;
-    icon: ReactNode
+    icon: ReactNode;
 }
 
 export function SectionTitle({ title, subtitle, icon }: SectionTitleProps) {
