@@ -1,8 +1,9 @@
 import { RegularText, TitleText } from "../../../../components/Typography";
 import { LoginFormContainer } from "./styles";
-import menulLogoImg  from "../../../../assets/ul.svg";
+import menulLogoImg from "../../../../assets/ul.svg";
 import { UserForm } from "./UserForm";
 import { Button } from "../../../../components/Button";
+import { NavLink } from "react-router-dom";
 
 export function LoginForm() {
   return (
@@ -13,8 +14,10 @@ export function LoginForm() {
       </TitleText>
 
       <UserForm />
-      <Button text="Logar"/>
-      <TitleText size="s" color="subtitle">Não tem conta ? <a href="/cadastro">Cadastre-se</a></TitleText>
+      <Button text="Logar" />
+      <TitleText size="s" color="subtitle">
+        Não tem conta ?<NavLink to="/register">Cadastre-se</NavLink>
+      </TitleText>
     </LoginFormContainer>
   );
 }
