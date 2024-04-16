@@ -10,8 +10,8 @@ export function Router(){
         <Routes>
             <Route path="/" element={<DefaultLayout/>}>
                 <Route path="/" element={<HomePage />}/>
-                <Route path="/completeOrder" element={<CompleteOrderPage />}/>
             </Route>
+                <Route path="/completeOrder" element={<CompleteOrderPage />}/>
                 <Route path="/login" element={<LoginPage />}/>
                 <Route path="/register" element={<RegisterPage/>}/>
         </Routes>

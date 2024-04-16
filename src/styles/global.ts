@@ -21,7 +21,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   button{
-    crusor: pointer;
+    cursor: pointer;
   }
 
   a{
