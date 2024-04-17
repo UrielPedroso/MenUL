@@ -5,19 +5,18 @@ interface QuantityInputContainerProps {
 }
 
 export const QuantityInputContainer = styled.div<QuantityInputContainerProps>`
-  flex: 1;
   background: ${({ theme }) => theme.colors["base-button"]};
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 4px;
+  gap: 3px;
   border-radius: 6px;
 
   padding: 0.5rem;
 
-  input {
+  input[type="number"] {
+    width: 1rem;
     text-align: center;
-    width: 120%;
     background: none;
     border: none;
     color: ${({ theme }) => theme.colors["base-title"]};
@@ -43,8 +42,8 @@ export const QuantityInputContainer = styled.div<QuantityInputContainerProps>`
 export const IconWrapper = styled.button.attrs({
   type: "button",
 })`
-  width: 0.875rem;
-  height: 0.875rem;
+  width: 100%;
+  height: 1.3rem;
   border: none;
   background: none;
   color: ${({ theme }) => theme.colors["brand-purple"]};

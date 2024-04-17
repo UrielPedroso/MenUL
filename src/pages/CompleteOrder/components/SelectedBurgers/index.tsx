@@ -1,5 +1,6 @@
 import { TitleText } from "../../../../components/Typography";
 import { BurgerCartCard } from "../BurgersCartCard";
+import { ConfirmationSection } from "./ConfirmationSection";
 import { DetailsContainer, SelectedBurgersContainer } from "./styles";
 
 export function SelectedBurgers(){
@@ -13,8 +14,9 @@ export function SelectedBurgers(){
                 <BurgerCartCard />
                 <BurgerCartCard />
                 <BurgerCartCard />
-            </DetailsContainer>
 
+                <ConfirmationSection />
+            </DetailsContainer>
         </SelectedBurgersContainer>
     )
 }
