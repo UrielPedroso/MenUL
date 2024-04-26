@@ -3,18 +3,19 @@ import { GlobalStyle } from "./styles/global";
 import { defaultTheme } from "./styles/default";
 import { BrowserRouter } from "react-router-dom";
 import { Router } from "./Routers";
+import { CartContextProvider } from "./contexts/CartContext";
 
 function App() {
-
   return (
     <ThemeProvider theme={defaultTheme}>
-
-      <GlobalStyle/>
+      <GlobalStyle />
       <BrowserRouter>
-        <Router />
+        <CartContextProvider>
+          <Router />
+        </CartContextProvider>
       </BrowserRouter>
     </ThemeProvider>
-  )
+  );
 }
 
-export default App
+export default App;

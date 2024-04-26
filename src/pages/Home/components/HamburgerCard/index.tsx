@@ -11,6 +11,8 @@ import {
   Tags,
 } from "./styles";
 import { formatMoney } from "../../../../utils/formatMoney";
+import { useCart } from "../../../../hooks/useCart";
+import { useState } from "react";
 
 export interface Lanches {
   id: number;
@@ -25,6 +27,27 @@ interface LanchesProps {
 }
 
 export function HamburgerCard({ lanches }: LanchesProps) {
+  const [quantity, setQuantity] = useState(1);
+
+  function handleIncrease(){
+    setQuantity(state => state + 1);
+  }
+
+  function handleDecrease(){
+    setQuantity(state => state - 1);
+  }
+
+  const { addItemToCart } = useCart();
+
+  function handleAddToCart(){
+    const itemToAdd = {
+      ...lanches,
+      quantity,
+    }
+
+    addItemToCart(itemToAdd)
+  }
+
   const formattedPrice = formatMoney(lanches.price);
 
   return (
@@ -51,8 +74,12 @@ export function HamburgerCard({ lanches }: LanchesProps) {
           </TitleText>
         </div>
         <AddCartWrapper>
-          <QuantityInput />
-          <button>
+          <QuantityInput 
+            onIncrease={handleIncrease}
+            onDecrease={handleDecrease}
+            quantity={quantity}
+          />
+          <button onClick={handleAddToCart}>
             <ShoppingCart weight="fill" size={22} />
           </button>
         </AddCartWrapper>
