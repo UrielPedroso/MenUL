@@ -73,6 +73,10 @@ export const CardFooter = styled.div`
   p {
     line-height: 0.75rem;
   }
+
+  input{
+    width: 1.5rem;
+  }
 `;
 
 export const AddCartWrapper = styled.div`

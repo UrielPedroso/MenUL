@@ -14,9 +14,9 @@ export const QuantityInputContainer = styled.div<QuantityInputContainerProps>`
 
   padding: 0.5rem;
 
-  input[type="number"] {
-    width: 1rem;
+  input {
     text-align: center;
+    width: 100%;
     background: none;
     border: none;
     color: ${({ theme }) => theme.colors["base-title"]};

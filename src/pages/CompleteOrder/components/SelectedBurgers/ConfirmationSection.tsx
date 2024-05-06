@@ -5,7 +5,7 @@ import { formatMoney } from "../../../../utils/formatMoney";
 import { ConfirmationSectionContainer } from "./styles";
 
 export function ConfirmationSection() {
-  const { cartItemsTotal,  cartQuantity } = useCart();
+  const { cartItemsTotal } = useCart();
   
   const formattedCartTotal = formatMoney(cartItemsTotal);
 

@@ -26,6 +26,7 @@ export const HamburgerCartCardContainer = styled.div`
         font-weight: 700;
     }
 
+
 `;
 
 export const ActionsContainer = styled.div`
@@ -36,7 +37,8 @@ export const ActionsContainer = styled.div`
     gap: 0.5rem;
 
     > div {
-        max-width: 4.5rem;
+        // max-width: 4.5rem;
+        width: 7rem;
         height: 100%;
     }
 `;

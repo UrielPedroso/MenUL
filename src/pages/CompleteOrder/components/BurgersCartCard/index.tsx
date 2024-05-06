@@ -41,7 +41,7 @@ export function BurgerCartCard({ lanche }: BurgerCartCardProps) {
           <RegularText color="subtitle">{lanche.name}</RegularText>
           <ActionsContainer>
             <QuantityInput
-              size="small"
+              size="medium"
               onIncrease={handleIncrease}
               onDecrease={handleDecrease}
               quantity={lanche.quantity}

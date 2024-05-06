@@ -1,4 +1,4 @@
-import { RegularText, TitleText } from "../../../../components/Typography";
+import { TitleText } from "../../../../components/Typography";
 import { LoginFormContainer } from "./styles";
 import menulLogoImg from "../../../../assets/ul.svg";
 import { UserForm } from "./UserForm";
