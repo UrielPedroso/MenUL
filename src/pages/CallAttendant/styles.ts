@@ -29,7 +29,7 @@ export const CallOrderContainer = styled.div`
     text-align: center;
   }
 
-  &:: before {
+  &::before {
     content: "";
     position: absolute;
     inset: -1px;

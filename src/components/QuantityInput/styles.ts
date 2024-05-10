@@ -49,7 +49,7 @@ export const IconWrapper = styled.button.attrs({
   color: ${({ theme }) => theme.colors["brand-purple"]};
   transition: 0.4s;
 
-  %:disable {
+  %:disabled {
     opacity: 0.4;
   }
 

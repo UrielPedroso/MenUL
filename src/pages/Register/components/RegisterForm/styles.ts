@@ -13,29 +13,27 @@ export const RegisterFormContainer = styled.div`
     height: 10rem;
     align-items: start;
   }
-  
 
-  button{
+  button {
     width: 15rem;
     height: 4.5rem;
     font-size: 1.5rem;
-    align-items: start;
     border-radius: 50px;
-    margin-top: 3rem;    
+    margin-top: 3rem;
+    margin-left: 5rem;
   }
 
-  a{
+  a {
     text-decoration: none;
     color: ${({ theme }) => theme.colors["brand-yellow"]};
   }
 
-  input{
+  input {
     font-size: 1.2rem;
   }
-
 `;
 
-export const UserFormContainer = styled.div`
+export const UserFormContainer = styled.form`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -43,5 +41,5 @@ export const UserFormContainer = styled.div`
   gap: 0.5rem;
   grid-auto-flow: dense;
 
-`;
 
+`;

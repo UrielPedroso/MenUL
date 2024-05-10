@@ -1,4 +1,3 @@
-import { Button } from "../../../../components/Button";
 import { TitleText } from "../../../../components/Typography";
 import { NewUserForm } from "./NewUserForm";
 import { RegisterFormContainer } from "./styles";
@@ -14,7 +13,6 @@ export function RegisterForm() {
       </TitleText>
 
       <NewUserForm />
-      <Button text="Cadastrar" />
       <TitleText size="s" color="subtitle">
         Já tem conta ?<NavLink to="/login">Login</NavLink>
       </TitleText>

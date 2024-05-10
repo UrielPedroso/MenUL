@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-export const RegisterContainer = styled.form`
+export const RegisterContainer = styled.div`
     margin-top: 2rem;
     display: flex;
-    Justify-content: center;
+    justify-content: center;
     
 `;

@@ -28,7 +28,7 @@ export const OrderDetailsContainer = styled.div`
     width: 50%;
   }
 
-  &:: before {
+  &::before {
     content: "";
     position: absolute;
     inset: -1px;

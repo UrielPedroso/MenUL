@@ -6,7 +6,6 @@ export const HamburgerCardContainer = styled.div`
   height: 105%;
   background: ${({ theme }) => theme.colors["base-card"]};
   border-radius: 6px 36px 6px 36px;
- 
 
   img {
     width: 7rem;
@@ -74,32 +73,33 @@ export const CardFooter = styled.div`
     line-height: 0.75rem;
   }
 
-  input{
-    width: 1.5rem;
+  input {
+    width: 2rem;
   }
 `;
 
 export const AddCartWrapper = styled.div`
-    width: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 3rem;
+
+  > button {
+    width: 2.375rem;
+    height: 2.375rem;
+    border: none;
     display: flex;
-    justify-content: space-between;
-    margin-left: 3rem;
+    align-items: center;
+    justify-content: center;
+    background: ${({ theme }) => theme.colors["brand-purple-dark"]};
+    color: ${({ theme }) => theme.colors["base-card"]};
+    border-radius: 6px;
+    margin-left: 0.3rem;
+    transition: 0.4s;
+  }
 
-    > button {
-        width: 2.375rem;
-        height: 2.375rem;
-        border: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: ${({ theme }) => theme.colors["brand-purple-dark"]};
-        color: ${({ theme }) => theme.colors["base-card"]};
-        border-radius: 6px;
-        margin-left: 0.3rem;
-        transition: .4s;
-
-        &:hover{
-            background: ${({ theme }) => theme.colors["brand-purple"]};
-            color: ${({ theme }) => theme.colors["base-card"]};
-        }
+  &:hover {
+    background: ${({ theme }) => theme.colors["brand-purple"]};
+    color: ${({ theme }) => theme.colors["base-card"]};
+  }
 `;
