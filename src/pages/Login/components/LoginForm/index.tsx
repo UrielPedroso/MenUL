@@ -14,8 +14,8 @@ export function LoginForm() {
       </TitleText>
 
       <UserForm />
-      <Button text="Logar" type="submit"/>
-      
+      <Button text="Logar" type="submit" />
+
       <TitleText size="s" color="subtitle">
         Não tem conta ?<NavLink to="/register">Cadastre-se</NavLink>
       </TitleText>
