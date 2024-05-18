@@ -8,6 +8,12 @@ export const RegisterFormContainer = styled.div`
   text-align: center;
   align-items: center;
 
+  label{
+    display: flex;
+    align-items: start;
+    top: 1.4rem;
+  }
+
   img {
     width: 10rem;
     height: 10rem;
@@ -20,7 +26,7 @@ export const RegisterFormContainer = styled.div`
     font-size: 1.5rem;
     border-radius: 50px;
     margin-top: 3rem;
-    margin-left: 5rem;
+    
   }
 
   a {
@@ -40,6 +46,17 @@ export const UserFormContainer = styled.form`
   align-items: start;
   gap: 0.5rem;
   grid-auto-flow: dense;
+
+  label{
+    display: flex;
+    align-items: start;
+    position: relative;
+    top: 1.4rem;
+  }
+
+  > div {
+    align-self: center;
+  }
 
 
 `;

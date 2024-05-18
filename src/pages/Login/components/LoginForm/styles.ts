@@ -13,15 +13,14 @@ export const LoginFormContainer = styled.div`
     height: 10rem;
     align-items: start;
   }
-  
 
   button{
     width: 15rem;
     height: 4.5rem;
     font-size: 1.5rem;
-    align-items: start;
+    align-items: center;
     border-radius: 50px;
-    margin-top: 3rem;    
+    margin-top: 3rem;
   }
 
   a{
@@ -35,13 +34,24 @@ export const LoginFormContainer = styled.div`
 
 `;
 
-export const UserFormContainer = styled.div`
+export const UserFormContainer = styled.form`
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: start;
   gap: 0.5rem;
   grid-auto-flow: dense;
+
+  label{
+    display: flex;
+    align-items: start;
+    position: relative;
+    top: 1.4rem;
+  }
+
+  div{
+    align-self: center;
+  }
 
 `;
 

@@ -7,6 +7,7 @@ import { RegisterPage } from "./pages/Register";
 import { OrderConfirmedPage } from "./pages/OrderCompleted";
 import { CallAttendant } from "./pages/CallAttendant";
 import { Wait } from "./pages/Wait";
+import { CommandGenerator } from "./pages/CommandGen";
 
 export function Router(){
     return(
@@ -18,6 +19,7 @@ export function Router(){
                 <Route path="/callAttendant" element={<CallAttendant />}/>
                 <Route path="/wait" element={<Wait/>}/>
             </Route>
+                <Route path="/command" element={<CommandGenerator />}/>
                 <Route path="/login" element={<LoginPage />}/>
                 <Route path="/register" element={<RegisterPage/>}/>
         </Routes>
