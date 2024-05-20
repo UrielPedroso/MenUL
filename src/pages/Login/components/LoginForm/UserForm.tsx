@@ -4,9 +4,10 @@ import { TitleText } from "../../../../components/Typography";
 import { UserFormContainer } from "./styles";
 import axios from "axios";
 import { Button } from "../../../../components/Button";
-import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export function UserForm() {
+  const navigate = useNavigate();
   const [inputs, setInputs] = useState({ nome: "", senha: "" });
   const [status, setStatus] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -20,8 +21,6 @@ export function UserForm() {
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    console.log(inputs);
-
     if (!inputs.nome || !inputs.senha) {
       setError("Todos os campos devem ser preenchidos");
       setStatus("error");
@@ -30,24 +29,24 @@ export function UserForm() {
 
     try {
       const response = await axios.post(
-        "http://localhost/backEnd/login.php",
-        inputs
-      );
-      if (response.status === 200) {
-        const responseData = response.data;
-        if (responseData.erro) {
-          setError(responseData.erro);
-          setStatus("error");
-        } else {
-          setStatus("success");
-          setError(null);
-          <NavLink to="/command"/>
+        "http://localhost/backend/login.php",
+        inputs,
+        {
+          headers: {
+            'Content-Type': 'application/json'
+          }
         }
+      );
+      if (response.data.success) {
+        setStatus("success");
+        setError(null);
+        localStorage.setItem('ID_Cliente', response.data.ID_Cliente);
+        navigate("/command");
       } else {
         setStatus("error");
-        setError("Erro ao Achar Usuario");
+        setError(response.data.erro);
       }
-    } catch (error: Error) {
+    } catch (error: any) {
       setStatus("error");
       setError("Erro ao enviar dados: " + error.message);
     }
@@ -55,7 +54,7 @@ export function UserForm() {
 
   return (
     <UserFormContainer onSubmit={handleSubmit}>
-      {status === "success" }
+      {status === "success" && <div>Usuário autenticado com sucesso!</div>}
       {error && <div>{error}</div>}
 
       <label htmlFor="name">
