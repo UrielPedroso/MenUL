@@ -8,6 +8,7 @@ import { NavLink } from "react-router-dom";
 
 export function OrderConfirmedPage() {
   const { colors } = useTheme();
+  const numero_comanda = localStorage.getItem('numero_comanda');
 
   return (
     <OrderConfirmedContainer>
@@ -25,7 +26,7 @@ export function OrderConfirmedPage() {
             iconBg={colors["brand-purple"]}
             text={
               <RegularText>
-                Pedido Realizado para <strong>comanda 42</strong>
+                Pedido Realizado para <strong>{numero_comanda ? `Comanda: ${numero_comanda}` : ''} {/* Exibe a comanda se estiver disponível */}</strong>
               </RegularText>
             }
           />

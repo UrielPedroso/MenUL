@@ -29,6 +29,7 @@ export function CommandGenerator() {
       const response = await axios.post("http://localhost/backend/generateCommand.php", { tableNumber, ID_Cliente });
 
       if (response.data.success) {
+        localStorage.setItem('numero_comanda', response.data.numero_comanda);
         navigate("/");
       } else {
         setError(response.data.erro);

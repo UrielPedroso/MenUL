@@ -4,12 +4,14 @@ import {
   HeaderContainer,
 } from "./styles";
 import menulLogoImg from "../../assets/ul.svg";
-import { Bell, Money, ShoppingCart, User, Wallet } from "phosphor-react";
-import { NavLink } from "react-router-dom";
+import { Bell, ShoppingCart, User } from "phosphor-react";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useCart } from "../../hooks/useCart";
+import { useEffect } from "react";
 
 export function Header() {
   const { cartQuantity } = useCart();
+  const numero_comanda = localStorage.getItem('numero_comanda');
 
   return (
     <HeaderContainer>
@@ -22,26 +24,20 @@ export function Header() {
           <NavLink to="/login">
             <HeaderButton variant="purple">
               <User size={20} />
-              Login
+              {numero_comanda ? `Comanda: ${numero_comanda}` : 'Login'} {/* Exibe a comanda se estiver disponível */}
             </HeaderButton>
           </NavLink>
 
           <NavLink to="/completeOrder">
             <HeaderButton variant="yellow">
               {cartQuantity >= 1 && <span>{cartQuantity}</span>}
-              <ShoppingCart size={20} weight="bold" />
+              <ShoppingCart size={25} weight="fill" />
             </HeaderButton>
           </NavLink>
 
           <NavLink to="/callAttendant">
             <HeaderButton variant="yellow">
-              <Bell size={20} weight="bold" />
-            </HeaderButton>
-          </NavLink>
-          
-          <NavLink to="/paySection">
-            <HeaderButton variant="yellow">
-              <Wallet size={20} weight="bold" />
+              <Bell size={25} weight="fill" />
             </HeaderButton>
           </NavLink>
         </HeaderButtonsContainer>
