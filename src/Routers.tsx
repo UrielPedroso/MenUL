@@ -8,6 +8,7 @@ import { OrderConfirmedPage } from "./pages/OrderCompleted";
 import { CallAttendant } from "./pages/CallAttendant";
 import { Wait } from "./pages/Wait";
 import { CommandGenerator } from "./pages/CommandGen";
+import { PaySection } from "./pages/PaySection";
 
 export function Router(){
     return(
@@ -16,8 +17,10 @@ export function Router(){
                 <Route path="/" element={<HomePage />}/>
                 <Route path="/completeOrder" element={<CompleteOrderPage />}/>
                 <Route path="/orderConfirmed" element={<OrderConfirmedPage />}/>
+                <Route path="/orderCompleted" element={<OrderConfirmedPage />}/>
                 <Route path="/callAttendant" element={<CallAttendant />}/>
                 <Route path="/wait" element={<Wait/>}/>
+                <Route path="/paySection" element={<PaySection  />}/>
             </Route>
                 <Route path="/command" element={<CommandGenerator />}/>
                 <Route path="/login" element={<LoginPage />}/>

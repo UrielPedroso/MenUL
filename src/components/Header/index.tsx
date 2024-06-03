@@ -4,7 +4,7 @@ import {
   HeaderContainer,
 } from "./styles";
 import menulLogoImg from "../../assets/ul.svg";
-import { Bell, ShoppingCart, User } from "phosphor-react";
+import { Bell, Money, ShoppingCart, User, Wallet } from "phosphor-react";
 import { NavLink } from "react-router-dom";
 import { useCart } from "../../hooks/useCart";
 
@@ -29,13 +29,19 @@ export function Header() {
           <NavLink to="/completeOrder">
             <HeaderButton variant="yellow">
               {cartQuantity >= 1 && <span>{cartQuantity}</span>}
-              <ShoppingCart size={25} weight="fill" />
+              <ShoppingCart size={20} weight="bold" />
             </HeaderButton>
           </NavLink>
 
           <NavLink to="/callAttendant">
             <HeaderButton variant="yellow">
-              <Bell size={25} weight="fill" />
+              <Bell size={20} weight="bold" />
+            </HeaderButton>
+          </NavLink>
+          
+          <NavLink to="/paySection">
+            <HeaderButton variant="yellow">
+              <Wallet size={20} weight="bold" />
             </HeaderButton>
           </NavLink>
         </HeaderButtonsContainer>

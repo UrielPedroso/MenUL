@@ -33,7 +33,7 @@ export function CommandGenerator() {
       } else {
         setError(response.data.erro);
       }
-    } catch (error: any) {
+    } catch (error: Error) {
       setError("Erro ao gerar comanda: " + error.message);
     }
   };

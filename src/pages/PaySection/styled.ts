@@ -1,11 +1,24 @@
 import styled from "styled-components";
-import { SectionBaseStyle } from "../../styles";
+import { SectionBaseStyle } from "../CompleteOrder/styles";
 
-export const SelectedBurgersContainer = styled.div`
+export const PaySectionContainer = styled.div`
+    width: 100%;
+    background: ${({ theme }) => theme.colors["base-card"]};
+    border-radius: 6px 44px 6px 44px;
+    padding: 2rem;
+    margin-top: 10rem;
+
+    > div {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     gap: 0.75rem;
-    width: 40rem;
+    width: 30rem;
+    display: flex;
+    
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
 `;
 
 export const DetailsContainer = styled(SectionBaseStyle)`

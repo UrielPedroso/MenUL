@@ -16,7 +16,6 @@ export const CallOrderContainer = styled.div`
   padding: 5rem;
   border-radius: 6px 36px 6px 36px;
   background: ${({ theme }) => theme.colors["base-background"]};
-  min-width: 32rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;

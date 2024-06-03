@@ -4,6 +4,7 @@ import { RegularText, TitleText } from "../../components/Typography";
 import { OrderConfirmedContainer, OrderDetailsContainer } from "./styles";
 import { useTheme } from "styled-components";
 import { Button } from "../../components/Button";
+import { NavLink } from "react-router-dom";
 
 export function OrderConfirmedPage() {
   const { colors } = useTheme();
@@ -37,7 +38,9 @@ export function OrderConfirmedPage() {
               </RegularText>
             }
           />
+          <NavLink to="/">
             <Button text="Voltar ao cardapio" />
+          </NavLink>
         </OrderDetailsContainer>
       </section>
     </OrderConfirmedContainer>

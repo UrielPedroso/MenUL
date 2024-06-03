@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import { Button } from "../../../../components/Button";
 import { RegularText } from "../../../../components/Typography";
 import { useCart } from "../../../../hooks/useCart";
@@ -19,8 +20,15 @@ export function ConfirmationSection() {
           R$ {formattedCartTotal}
         </RegularText>
       </div>
+      <div>
+        <NavLink to="/orderCompleted">
+          <Button text="Confirmar Pedido"  disabled={cartItemsTotal < 1} />
+        </NavLink>
 
-      <Button text="Confirmar Pedido" />
+          <NavLink to="/">
+            <Button text="Continuar Comprando"/>
+          </NavLink>
+      </div>
     </ConfirmationSectionContainer>
   );
 }

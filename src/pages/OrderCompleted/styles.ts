@@ -13,10 +13,9 @@ export const OrderConfirmedContainer = styled.div`
 `;
 
 export const OrderDetailsContainer = styled.div`
-  padding: 2.5rem;
+  padding: 2rem;
   border-radius: 6px 36px 6px 36px;
   background: ${({ theme }) => theme.colors["base-background"]};
-  min-width: 32rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
